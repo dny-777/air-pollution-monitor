@@ -1,0 +1,42 @@
+# =============================================================================
+# GENERAL (OS, IDE, Logs)
+# =============================================================================
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# =============================================================================
+# ENVIRONMENT VARIABLES (CRITICAL)
+# Ignore all .env files containing secrets
+# =============================================================================
+.env
+.env.*
+# --- BUT ---
+# Do NOT ignore the example file, which is a template for developers
+!.env.example
+
+# =============================================================================
+# FRONTEND (Node.js / Vite)
+# Located in the 'frontend/' directory
+# =============================================================================
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+npm-debug.log*
+yarn-error.log*
+
+# =============================================================================
+# BACKEND (Python / Flask)
+# Located in the 'air-pollution-backend/' directory
+# =============================================================================
+air-pollution-backend/venv/
+air-pollution-backend/.venv/
+air-pollution-backend/**/__pycache__/
+air-pollution-backend/*.pyc
+
+# Large ML models and data files that should not be in the repository
+air-pollution-backend/*.pkl
+air-pollution-backend/*.xlsx
