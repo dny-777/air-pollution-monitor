@@ -1,31 +1,9 @@
 {
-  "version": 2,
   "builds": [
-    {
-      "src": "air-pollution-backend/app.py",
-      "use": "@vercel/python"
-    },
     {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist"
-      }
+      "config": { "distDir": "frontend/dist" }
     }
-  ],
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "air-pollution-backend/app.py"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "frontend/dist/$1"
-    }
-  ],
-  "functions": {
-    "air-pollution-backend/app.py": {
-      "runtime": "python3.9"
-    }
-  }
+  ]
 }
