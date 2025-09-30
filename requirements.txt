@@ -1,6 +1,7 @@
-Flask
-scikit-learn
+flask
+flask-cors
 pandas
+scikit-learn
 numpy
 joblib
-openpyxl
+gunicorn
